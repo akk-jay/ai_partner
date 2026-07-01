@@ -4,7 +4,43 @@
 
 ## 📸 项目预览
 
-![AI Partner](resources/cat.jpg)
+### 主界面：AI 伴侣对话
+
+![主界面](resources/demo1.png)
+
+### 侧边栏：AI 控制面板
+
+![控制面板](resources/demo2.png)
+
+### 流式对话 & 角色互动
+
+![流式对话](resources/demo3.png)
+
+### 多会话管理
+
+![会话管理](resources/demo4.png)
+
+## 🖥️ 启动网页 Demo
+
+在终端中执行以下命令即可在本地浏览器中打开 Demo：
+
+```bash
+# 1. 确保已安装依赖
+pip install streamlit openai
+
+# 2. 配置 DeepSeek API Key（Windows）
+set DEEPSEEK_API_KEY=你的API密钥
+
+# 2. 配置 DeepSeek API Key（macOS / Linux）
+export DEEPSEEK_API_KEY=你的API密钥
+
+# 3. 启动应用
+streamlit run ./06.ai_partner_4.py
+```
+
+启动后，浏览器会自动打开 `http://localhost:8501`，即可看到上方截图中的页面。
+
+> **提示**：如果浏览器没有自动打开，手动访问 `http://localhost:8501` 即可。
 
 ## ✨ 功能特性
 
@@ -34,8 +70,8 @@
 ├── 03.ai_partner_1.py             # AI Partner v1：基础对话（非流式）
 ├── 04.ai_partner_2.py             # AI Partner v2：流式输出 + 对话记忆
 ├── 05.ai_partner_3.py             # AI Partner v3：可自定义伴侣性格
-├── 06.ai_partner_4.py             # AI Partner v4：多会话管理（最终版）
-├── resources/                     # 静态资源（图片、音视频、提示词）
+├── 06.ai_partner_4.py             # AI Partner v4：多会话管理（最终版）⭐
+├── resources/                     # 静态资源（截图、图片、音视频等）
 ├── sessions/                      # 用户会话存档（已加入 .gitignore）
 └── .gitignore
 ```
@@ -88,7 +124,7 @@ streamlit run 06.ai_partner_4.py
 ## 🎯 使用说明
 
 1. 启动应用后，在右侧聊天框输入消息
-2. 左侧**AI 控制面板**可调整伴侣信息：
+2. 左侧 **AI 控制面板** 可调整伴侣信息：
    - **昵称**：给 AI 伴侣起名字
    - **性别**：设定 AI 伴侣性别
    - **性格**：描述 AI 伴侣的性格特征（如"温柔体贴的知心姐姐"）

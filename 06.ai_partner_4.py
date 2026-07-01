@@ -56,9 +56,8 @@ def load_sessions():     # load_sessions:加载所有会话列表信息
         for file in os.listdir("sessions"): # 遍历sessions目录下的所有文件   listdir: 列出目录的文件和子目录
             if file.endswith(".json"): # 判断文件是否以.json结尾
                 sessions_list.append(file[:-5:]) # 将文件名添加到会话列表中，[:-5:]表示去掉文件名的后缀.json
+    sessions_list.sort(reverse=True)  # 对会话列表进行排序
     return sessions_list
-
-
 
 
 #加载指定会话信息
@@ -179,6 +178,11 @@ with st.sidebar:
                 st.rerun()
         # st.button(session,width='stretch',icon="✉️")
         # st.button("",width='stretch',icon="❌️")
+
+#分割线
+    st.markdown("___")
+
+
 
     st.subheader("伴侣信息")
     #昵称
